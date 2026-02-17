@@ -1,0 +1,26 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}
+Game Over
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center m-4 fw-bold">Game Over</h2>
+
+    <h3 class="text-center fw-bold">Sorry {{ request.user.username }} 😔</h3>
+    <p class="text-center">
+        You solved <strong>{{ solved }}</strong> question{{ solved|pluralize }}.
+        The quiz is over. Better luck next time! 
+        Keep practicing and you will improve.
+    </p>
+
+    <div class="text-center mt-4">
+        <a href="{% url 'categories' %}" class="btn btn-primary">Try Again</a>
+        <a href="{% url 'homepage' %}" class="btn btn-secondary">Home</a>
+    </div>
+   <div class="text-center mt-4">
+     <img src="{% static 'image/cute-crying.gif' %}" alt="" class="p-4 col-lg-6 col-md-6 small-gif ">
+   </div>
+</div>
+{% endblock %}

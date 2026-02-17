@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}
+About page
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <div class="text-center mb-4">
+    <h1 class="fw-bold display-5" style="color:#1a1c80;">
+        About QuizZone
+    </h1>
+
+    <p class="fs-5 text-muted mt-3 px-lg-5">
+        QuizZone is an online quiz platform specially designed for IT and Computer Science students.
+        Our goal is to help learners test, practice, and improve their technical knowledge through 
+        interactive and well-structured quizzes.
+    </p>
+</div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="card col-lg-8 col-md-10 shadow-lg border-0 rounded-4 p-4">
+
+            <h3 class="text-center mb-4 text-dark"> Features</h3>
+
+            <ul class="list-group list-group-flush fs-5">
+                <li class="list-group-item"> Subject-wise quizzes for IT & CS</li>
+                <li class="list-group-item"> Multiple-choice questions with instant feedback</li>
+                <li class="list-group-item"> Leaderboard to track progress and performance</li>
+                <li class="list-group-item"> Simple, clean, and responsive design</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <h4 class="fw-semibold text-secondary">Our Mission</h4>
+        <p class="fs-5 text-muted mt-2 px-lg-5">
+            We aim to make technical learning engaging, competitive, and accessible 
+            for every student who wants to grow in the IT field.
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}

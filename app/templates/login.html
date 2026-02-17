@@ -1,0 +1,45 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}Login page{% endblock %}
+
+{% block content %}
+<h1 class="text-center m-5">Login Form</h1>
+<div class="container cont mt-4 p-4 rounded col-lg-6 col-mb-10 shadow-sm">
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for fm in form %}
+            {{ fm.label_tag }}
+            {{ fm }}
+            <small class="text-danger">{{ fm.errors }}</small>
+        {% endfor %}
+
+        <input type="submit" value="Login" class="btn btn-primary mt-3 w-100 rounded-pill">
+
+        <div class="text-center mt-3">
+            <a href="{% url 'forgot_password' %}" class="btn btn-outline-warning w-50 rounded-pill">
+                Forgot Password?
+            </a>
+        </div>
+
+        <div class="text-center text-primary fw-bold mt-3">
+            <small>New User? 
+                <a href="{% url 'registration' %}" class="text-danger">Register now</a>
+            </small>
+        </div>
+
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="alert alert-{{ msg.tags }} my-3" role="alert">{{ msg }}</div>
+            {% endfor %}
+        {% endif %}
+
+    </form>
+</div>
+{% endblock %}

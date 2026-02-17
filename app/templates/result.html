@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}
+Result page
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center m-4 fw-bold">Quiz Result</h2>
+
+    <h3 class="text-center fw-bold">Congratulations {{ request.user.username }} 🎉</h3>
+
+    <p class="text-center">
+        You have successfully completed <strong>{{ solved }}</strong> question{{ solved|pluralize }}.
+        Your knowledge and effort have truly paid off.
+        Keep learning and keep growing!
+    </p>
+    <div class="text-center mt-5">
+     <img src="{% static 'image/cute-happy.gif' %}" alt="" class="p-4 small-gif ">
+   </div>
+</div>
+{% endblock %}

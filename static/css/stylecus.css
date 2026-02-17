@@ -1,0 +1,179 @@
+body{
+    background-color: #dae7f5;
+}
+.fixed-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.fixed-footer{
+    /* background: linear-gradient(90deg, #14B8A6, #6366F1); */
+    background-color: darkblue;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+/* Navbar same as footer / marquee */
+.navbar-quiz {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: darkblue;
+    /* background: linear-gradient(90deg, #14B8A6, #6366F1); */
+    border-bottom: 3px solid rgba(255,255,255,0.3);
+}
+
+/* Text colors */
+.navbar-quiz .nav-link,
+.navbar-quiz .navbar-brand {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* Hover effect */
+.navbar-quiz .nav-link:hover {
+    color: #ECFEFF !important;
+}
+
+/* Toggler (mobile icon) */
+.navbar-toggler {
+    border-color: #ffffff;
+}
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+h2,
+h1,
+.box>h1{
+    color: darkblue;
+    font-size:50px;
+     animation: fadeIn 0.8s ease-in-out;
+}
+.box>.btn{
+    background-color: darkblue;
+     animation: fadeIn 0.8s ease-in-out;
+}
+.card>.btn{
+    background-color: darkblue;
+     animation: fadeIn 0.8s ease-in-out;
+}
+.card {
+    font-size: 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.card a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card:hover {
+    border: 1px solid #1e3a8a !important;
+    color: #1e3a8a !important;
+    transform: translateY(-5px);
+}
+
+/* Form card */
+.cont {
+    background: rgba(255, 255, 255, 0.4) ;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+/* Input hover / focus */
+input:focus {
+    border-color: #6a5acd;
+    box-shadow: 0 0 6px rgba(106, 90, 205, 0.5);
+    outline: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover */
+input[type="submit"]:hover {
+    background-color: darkblue;
+    transform: translateY(-2px);
+}
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 0.6s ease forwards;
+    transition: transform 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.card:hover {
+    border: 1px solid #1e3a8a !important;
+    color: #1e3a8a !important;
+    transform: translateY(-10px) !important;
+}
+.row .col-md-4:nth-child(1) .card { animation-delay: 0.2s; }
+.row .col-md-4:nth-child(2) .card { animation-delay: 0.4s; }
+.row .col-md-4:nth-child(3) .card { animation-delay: 0.6s; }
+.row .col-md-4:nth-child(4) .card { animation-delay: 0.8s; }
+.row .col-md-4:nth-child(5) .card { animation-delay: 1s; }
+.row .col-md-4:nth-child(6) .card { animation-delay: 1.2s; }
+
+.btn-quiz {
+    background-color: darkblue;
+    color: white;
+    border-radius: 5px; /* optional rounded button */
+    transition: all 0.3s ease;
+}
+
+.btn-quiz:hover {
+    background-color: #1e3a8a; /* thoda darker on hover */
+    transform: translateY(-2px);
+}
+.small-gif {
+    max-width: 250px;
+    height: auto;
+    box-shadow: 10px 5px 5px darkblue;
+}
+
+/* Small animation */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
