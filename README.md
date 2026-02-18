@@ -50,6 +50,10 @@ pip install -r requirements.txt
 
 python manage.py migrate
 
+## Load inintal Data
+
+2. python manage.py loaddata data.json
+
 ### Create Superuser (Optional)
 
 python manage.py createsuperuser
